@@ -21,7 +21,12 @@
 - 📱 **Responsive UI:** Fully optimized for mobile, tablet, and desktop screens.
 
 ---
+## 🔗 Related Repository
 
+Check out the backend code for this project here:  
+👉 https://github.com/ritvijverma/Cartifya-Backend
+
+---
 
 ## 🚀 Tech Stack
 
