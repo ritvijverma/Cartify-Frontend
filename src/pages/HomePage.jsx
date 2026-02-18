@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Layout from "../components/Layouts/Layout";
 import axios from "axios";
-import { Row } from "antd";
+import { Row, Col, Skeleton } from "antd";
 import ProductCard from "./Card/ProductCard";
 import { addToCart } from "../features/cart/cartSlice";
 import { useDispatch } from "react-redux";
@@ -35,24 +35,71 @@ const HomePage = () => {
     getAllProducts();
   },[] );
 
+
   return (
     <Layout title={"All Products"}>
-      <VideoSection/>
-      <h2 style={{ textAlign: "center", marginBottom: 20 }}>
-        All Products
-      </h2>
-   
+      <VideoSection />
 
-      <Row gutter={[16, 16]}>
-        {products?.map((p) => (
-          <ProductCard
-            key={p._id}
-            p={p}
-            onAddToCart={(product) => dispatch(addToCart(product))}
+{loading ? (
+  <Row gutter={[16, 16]}>
+    {Array.from({ length: 8 }).map((_, index) => (
+      <Col xs={24} sm={12} md={8} lg={6} key={index}>
+        <div
+          style={{
+            border: "1px solid #f0f0f0",
+            borderRadius: 8,
+            padding: 16,
+          }}
+        >
+          {/* Image Skeleton */}
+          <Skeleton.Image
+            style={{
+              width: "100%",
+              height: 200,
+              marginBottom: 16,
+              
+            }}
+            active
           />
-        ))}
-      </Row>
 
+          {/* Title Skeleton */}
+          <Skeleton
+            active
+            title={{ width: "80%" }}
+            paragraph={false}
+          />
+
+          {/* Price Skeleton */}
+          <Skeleton
+            active
+            title={{ width: "40%" }}
+            paragraph={false}
+            style={{ marginTop: 10 }}
+          />
+
+          {/* Button Skeleton */}
+          <Skeleton.Button
+            active
+            style={{
+              width: "100%",
+              marginTop: 15,
+            }}
+          />
+        </div>
+      </Col>
+    ))}
+  </Row>
+) : (
+  <Row gutter={[16, 16]}>
+    {products?.map((p) => (
+      <ProductCard
+        key={p._id}
+        p={p}
+        onAddToCart={(product) => dispatch(addToCart(product))}
+      />
+    ))}
+  </Row>
+)}
 
     </Layout>
   );

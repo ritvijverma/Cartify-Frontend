@@ -5,7 +5,7 @@ const BannerSlider = () => {
     <Carousel autoplay autoplaySpeed={3000}>
       <div>
         <img
-          src="https://static.helioswatchstore.com/media/catalog/category/Updated_All_Watches_Banner.jpg"
+          src="https://ik.imagekit.io/hmqjpocpg/Cartify%20Project/Banner/BannerImage01.jpg"
           alt="Banner 1"
           style={{
             width: "100%",
@@ -17,7 +17,7 @@ const BannerSlider = () => {
 
       <div>
         <img
-          src="https://static.helioswatchstore.com/media/catalog/category/mens_watch_banner.png"
+          src="https://ik.imagekit.io/hmqjpocpg/Cartify%20Project/Banner/BannerImage02.png"
           alt="Banner 2"
           style={{
             width: "100%",
@@ -28,7 +28,7 @@ const BannerSlider = () => {
       </div>
           <div>
         <img
-          src="https://static.helioswatchstore.com/media/catalog/category/women_watch_banner.png"
+          src="https://ik.imagekit.io/hmqjpocpg/Cartify%20Project/Banner/BannerImage00.png"
           alt="Banner 2"
           style={{
             width: "100%",

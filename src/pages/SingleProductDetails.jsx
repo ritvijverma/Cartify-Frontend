@@ -47,6 +47,8 @@ const SingleProductDetails = () => {
               style={{
                 width: "100%",
                 borderRadius: 12,
+                  height: "400px",   // 👈 fixed height
+
                 objectFit: "cover",
                 boxShadow: "0 4px 20px rgba(0,0,0,0.1)"
               }}

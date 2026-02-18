@@ -13,7 +13,7 @@ const VideoSection = () => {
     >
       {/* Background Video */}
       <video
-        src="https://www.hamiltonwatch.com/media/video/homepage/Homepage_Desktop_RE9.mp4"
+        src="https://ik.imagekit.io/hmqjpocpg/Cartify%20Project/Banner/Homepage_Desktop_RE9.webm"
         autoPlay
         muted
         loop
