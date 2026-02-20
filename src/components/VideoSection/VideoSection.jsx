@@ -9,6 +9,8 @@ const VideoSection = () => {
         width: "100%",
         height: "550px",
         overflow: "hidden",
+                marginBottom: "40px",
+
       }}
     >
       {/* Background Video */}
